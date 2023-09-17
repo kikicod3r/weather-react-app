@@ -1,13 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./Weather.css";
+import App from "./App";
+import Weather from "./Weather";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    <Weather />
+    <br />
+    <footer className="TextCenter">
+      {" "}
+      This app was coded by Markita Lilly and is open-sourced on{" "}
+      <a
+        href="https://github.com/kikicod3r/weather-react-app"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github{" "}
+      </a>
+    </footer>
   </React.StrictMode>
 );
 
