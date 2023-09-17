@@ -29,13 +29,14 @@ export default function Weather() {
     setCity(event.target.value);
   }
   let form = (
-    <form className="TextCenter" onSubmit={handleSubmit}>
+    <form className="SearchForm TextCenter" onSubmit={handleSubmit}>
       <input
+        className="SearchBox"
         type="search"
         placeholder="Enter a city..."
         onChange={citySearch}
       />
-      <input type="submit" value="Search" />
+      <input className="SearchButton" type="submit" value="Search" />
     </form>
   );
 
@@ -43,7 +44,7 @@ export default function Weather() {
     return (
       <div>
         {form}
-        <ul className="Weather">
+        <ul className="Weather TextCenter">
           <li>Temperature: {Math.round(weatherDetails.temperature)}°F</li>
           <li>Humidity: {weatherDetails.humidity}%</li>
           <li>Wind: {weatherDetails.wind} mph</li>

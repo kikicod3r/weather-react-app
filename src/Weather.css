@@ -1,8 +1,20 @@
-background {
-  background-color: grey;
-}
 .TextCenter {
   text-align: center;
+}
+.SearchForm {
+  padding: 10px;
+}
+.SearchBox {
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 15px;
+}
+.SearchButton {
+  padding: 10px 15px;
+  border-radius: 7px;
+  color: #6bd5e1;
+  background-color: white;
+  font-size: 15px;
 }
 
 ul {
