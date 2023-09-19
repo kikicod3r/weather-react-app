@@ -1,6 +1,9 @@
 .TextCenter {
   text-align: center;
 }
+.Weather {
+  border: solid 1px white;
+}
 .SearchForm {
   padding: 10px;
 }
@@ -15,8 +18,11 @@
   color: #6bd5e1;
   background-color: white;
   font-size: 15px;
+  font-weight: bold;
 }
 
 ul {
   list-style: none;
+  color: white;
+  font-size: 20px;
 }
