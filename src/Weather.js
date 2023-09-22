@@ -17,12 +17,22 @@ export default function Weather() {
         <li>Thursday 10:12 </li>
         <li>Partly Cloudy</li>
       </ul>
-
-      <ul className="TextCenter WeatherDetails">
-        <li>Precipitation: </li>
-        <li>Humidity: </li>
-        <li>Wind: </li>
-      </ul>
+      <div className="row">
+        <div className="col-6">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+            alt="Partly Cloudy"
+          />
+          65° F
+        </div>
+        <div className="col-6">
+          <ul className="TextCenter WeatherDetails">
+            <li>Precipitation: 10%</li>
+            <li>Humidity: 42% </li>
+            <li>Wind: 15mph </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

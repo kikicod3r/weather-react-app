@@ -17,7 +17,7 @@ root.render(
     <br />
     <footer className="TextCenter">
       {" "}
-      This app was coded by Markita Lilly and is open-sourced on{" "}
+      This project was coded by Markita Lilly and is open-sourced on{" "}
       <a
         href="https://github.com/kikicod3r/weather-react-app"
         target="_blank"
