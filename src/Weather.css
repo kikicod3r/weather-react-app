@@ -3,6 +3,9 @@
 }
 .Weather {
   border: solid 1px white;
+  border-radius: 5px;
+  padding: 18px;
+  max-width: 700px;
 }
 .SearchForm {
   padding: 10px;
@@ -25,4 +28,16 @@ ul {
   list-style: none;
   color: white;
   font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: inline-block;
+  height: 50px;
+}
+
+.currentTemperature {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 50px;
 }
