@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CurrentDate from "./CurrentDate";
 import React from "react";
 import axios from "axios";
 
@@ -14,9 +15,8 @@ export default function Weather(props) {
       city: response.data.city,
       description: response.data.condition.description,
       iconUrl: `https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png`,
+      date: new Date(response.data.time * 1000),
     });
-
-    console.log(response.data);
   }
 
   if (weatherDetails.pageReady) {
@@ -34,23 +34,24 @@ export default function Weather(props) {
 
         <h1> {weatherDetails.city} </h1>
         <ul>
-          <li>Thursday 10:12 </li>
+          <li>
+            {" "}
+            <CurrentDate date={weatherDetails.date} />{" "}
+          </li>
           <li className="text-capitalize">{weatherDetails.description}</li>
         </ul>
         <div className="row">
           <div className="col-6">
-            <div className="clearfix">
+            <div className="d-flex mt-2">
               <img
                 src={weatherDetails.iconUrl}
                 alt={weatherDetails.description}
-                className="float-left"
               />
-              <div className="float-left">
-                <span className="currentTemperature">
-                  {Math.round(weatherDetails.temperature)}
-                </span>
-                <span className="units">°F</span>
-              </div>
+
+              <span className="currentTemperature">
+                {Math.round(weatherDetails.temperature)}
+              </span>
+              <span className="units">°F</span>
             </div>
           </div>
           <div className="col-6">

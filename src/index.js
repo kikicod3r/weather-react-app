@@ -5,6 +5,7 @@ import "./index.css";
 import "./Weather.css";
 import App from "./App";
 import Weather from "./Weather";
+import CurrentDate from "./CurrentDate";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -12,7 +13,7 @@ root.render(
   <React.StrictMode>
     <div>
       <App />
-      <Weather defaultCity="New York City" />
+      <Weather defaultCity="Chicago" />
     </div>
     <br />
     <footer className="TextCenter">
