@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <div>
       <App />
-      <Weather />
+      <Weather defaultCity="New York City" />
     </div>
     <br />
     <footer className="TextCenter">
