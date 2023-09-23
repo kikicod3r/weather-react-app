@@ -5,7 +5,7 @@ import "./index.css";
 import "./Weather.css";
 import App from "./App";
 import Weather from "./Weather";
-import CurrentDate from "./CurrentDate";
+
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
