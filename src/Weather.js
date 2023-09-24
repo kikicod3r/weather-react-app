@@ -1,7 +1,5 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
-import React from "react";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -16,26 +14,27 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.city,
       description: response.data.condition.description,
-      iconUrl: `https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png`,
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       date: new Date(response.data.time * 1000),
     });
+    console.log(response.data);
   }
 
-  function search() {
-    const apiKey = "1687841bccf274a08foafbat6c3f1ff0";
-
-    let units = "imperial";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
   function handleSubmit(event) {
     event.preventDefault();
-    search(city);
+    search();
   }
 
   function handleSearchInput(event) {
     setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "1687841bccf274a08foafbat6c3f1ff0";
+    let units = "imperial";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherDetails.pageReady) {
@@ -55,6 +54,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    search();
     return "Loading...";
   }
 }

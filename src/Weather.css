@@ -33,7 +33,8 @@ ul {
 }
 img {
   display: inline-block;
-  height: 50px;
+  height: 65px;
+  width: 75px;
 }
 
 .currentTemperature {

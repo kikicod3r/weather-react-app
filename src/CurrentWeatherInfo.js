@@ -1,4 +1,6 @@
 import React from "react";
+import CurrentTemperature from "./CurrentTemperature";
+
 import CurrentDate from "./CurrentDate";
 
 export default function CurrentWeatherInfo(props) {
@@ -17,10 +19,7 @@ export default function CurrentWeatherInfo(props) {
           <div className="d-flex mt-2">
             <img src={props.details.iconUrl} alt={props.details.description} />
 
-            <span className="currentTemperature">
-              {Math.round(props.details.temperature)}
-            </span>
-            <span className="units">°F</span>
+            <CurrentTemperature fahrenheit={props.details.temperature} />
           </div>
         </div>
         <div className="col-6">
