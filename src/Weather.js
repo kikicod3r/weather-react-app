@@ -10,6 +10,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherDetails({
       pageReady: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
@@ -52,7 +53,7 @@ export default function Weather(props) {
           <input className="SearchButton" type="submit" value="Search" />
         </form>
         <CurrentWeatherInfo details={weatherDetails} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherDetails.coordinates} />
       </div>
     );
   } else {
