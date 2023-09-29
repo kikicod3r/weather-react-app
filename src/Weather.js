@@ -19,7 +19,6 @@ export default function Weather(props) {
       iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       date: new Date(response.data.time * 1000),
     });
-    console.log(response.data);
   }
 
   function handleSubmit(event) {
