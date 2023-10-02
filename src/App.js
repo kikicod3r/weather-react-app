@@ -5,9 +5,6 @@ import Weather from "./Weather.js";
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1 className="TextCenter"></h1>
-      </header>
       <Weather defaultCity="Chicago" />
 
       <footer className="TextCenter">
