@@ -1,4 +1,5 @@
 import React from "react";
+
 import CurrentTemperature from "./CurrentTemperature";
 
 import CurrentDate from "./CurrentDate";
@@ -6,7 +7,7 @@ import CurrentDate from "./CurrentDate";
 export default function CurrentWeatherInfo(props) {
   return (
     <div className="CurrentWeatherInfo">
-      <h1 className="mb-3"> {props.details.city} </h1>
+      <h1 className="CurrentCity mb-3"> {props.details.city} </h1>
       <ul>
         <li className="mb-2">
           {" "}

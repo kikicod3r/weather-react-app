@@ -40,7 +40,7 @@ export default function Weather(props) {
 
   if (weatherDetails.pageReady) {
     return (
-      <div className="Weather container">
+      <div className="Weather container mb-4">
         <form className="SearchForm TextCenter" onSubmit={handleSubmit}>
           <input
             className="SearchBox"

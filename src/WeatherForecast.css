@@ -1,6 +1,7 @@
 .WeatherForecast {
   text-align: center;
   color: white;
+  font-size: 20px;
 }
 .WeatherForecast-min {
   opacity: 0.7;
