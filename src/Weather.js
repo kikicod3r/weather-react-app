@@ -42,14 +42,24 @@ export default function Weather(props) {
     return (
       <div className="Weather container mb-4">
         <form className="SearchForm TextCenter" onSubmit={handleSubmit}>
-          <input
-            className="SearchBox"
-            type="search"
-            placeholder="Enter a city..."
-            autoFocus="on"
-            onChange={handleSearchInput}
-          />
-          <input className="SearchButton" type="submit" value="Search" />
+          <div className="row">
+            <div className="col-9">
+              <input
+                className="SearchBox"
+                type="search"
+                placeholder="Enter a city..."
+                autoFocus="on"
+                onChange={handleSearchInput}
+              />
+            </div>
+            <div className="col-3">
+              <input
+                className="SearchButton btn"
+                type="submit"
+                value="Search"
+              />
+            </div>
+          </div>
         </form>
         <CurrentWeatherInfo details={weatherDetails} />
         <WeatherForecast coordinates={weatherDetails.coordinates} />
