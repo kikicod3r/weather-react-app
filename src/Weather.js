@@ -57,6 +57,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <h3 className="LoadingScreen"> Loading... </h3>;
   }
 }
