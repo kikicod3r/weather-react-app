@@ -6,14 +6,15 @@ import CurrentDate from "./CurrentDate";
 export default function CurrentWeatherInfo(props) {
   return (
     <div className="CurrentWeatherInfo">
-      <h1> {props.details.city} </h1>
+      <h1 className="mb-3"> {props.details.city} </h1>
       <ul>
-        <li>
+        <li className="mb-2">
           {" "}
           <CurrentDate date={props.details.date} />{" "}
         </li>
-        <li className="text-capitalize">{props.details.description}</li>
+        <li className="text-capitalize mb-2">{props.details.description}</li>
       </ul>
+
       <div className="row">
         <div className="col-6">
           <div className="d-flex mt-2">
@@ -23,8 +24,7 @@ export default function CurrentWeatherInfo(props) {
           </div>
         </div>
         <div className="col-6">
-          <ul className="TextCenter WeatherDetails">
-            <li>Precipitation: 10%</li>
+          <ul className="TextCenter WeatherDetails mb-5">
             <li>Humidity: {props.details.humidity}% </li>
             <li>Wind: {Math.round(props.details.wind)} mph </li>
           </ul>

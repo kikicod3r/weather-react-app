@@ -10,15 +10,20 @@ export default function WeatherForecast(props) {
   function handleResponse(response) {
     setFullForecast(response.data.daily);
     setForecastReady(true);
-    console.log(response.data);
   }
   if (forecastReady) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay data={fullForecast[0]} />
-          </div>
+          {fullForecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
