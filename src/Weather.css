@@ -1,3 +1,6 @@
+input {
+  width: 100%;
+}
 .TextCenter {
   text-align: center;
 }
@@ -9,9 +12,7 @@
   max-width: 700px;
   margin-top: 150px;
 }
-.SearchForm {
-  padding: 10px;
-}
+
 .SearchBox {
   padding: 10px 15px;
   border-radius: 7px;
