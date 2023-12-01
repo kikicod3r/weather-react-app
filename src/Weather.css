@@ -62,4 +62,7 @@ img {
   .Weather {
     max-width: calc(100% - 20px);
   }
+  .SearchButton {
+    padding: 10px 5px;
+  }
 }
